@@ -1,0 +1,22 @@
+
+#include <Servo.h> // servo kütüphanesi
+Servo myservo; // servoyu tanımla
+int pos = 0; 
+void setup() 
+{ 
+myservo.attach(9);
+ // servonun sinyal pinini 9 a bağlıyoruz
+} 
+void loop() 
+{ 
+myservo.write(90);
+ // servonun ilk konumunu kapak kapalı olacak şekilde ayarlıyoruz 
+delay(10000); 
+// balıklara hangi aralıklarda yem verileceğini ayarlamak için 
+// 1 gün ya da yarım gün yapılması uygun olacaktır
+myservo.write(55); 
+//servonun kapağının açık olacağı konumu ayarlıyoruz
+delay(300); // kapakların açık olacağı süre.
+// Dökülecek yem miktarını ayarlamak için
+}
+
